@@ -352,3 +352,74 @@ section.design .section-info ul li::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
+
+section.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+section.portfolio ul.shuffle {
+  display: flex;
+  justify-content: center;
+}
+section.portfolio ul.shuffle li {
+  padding: 10px;
+}
+section.portfolio ul.shuffle li.active {
+  color: #fff;
+  background-color: var(--main-color);
+}
+section.portfolio .images-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+section.portfolio .images-container .image {
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  section.portfolio .images-container .image {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1199px) {
+  section.portfolio .images-container .image {
+    flex-basis: 25%;
+  }
+}
+section.portfolio .images-container .image:hover img {
+  transform: rotate(3deg) scale(1.1);
+  transition: 0.3s;
+}
+section.portfolio .images-container .image .caption {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+section.portfolio .images-container .image:hover .caption {
+  bottom: 0;
+}
+section.portfolio .images-container .image .caption h4 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+section.portfolio .images-container .image .caption p {
+  color: var(--main-color);
+}
+section.portfolio .images-container .image .caption p {
+  color: var(--main-color);
+}
+section.portfolio .btn-more {
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--main-color);
+}
