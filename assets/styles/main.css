@@ -6,6 +6,7 @@
 :root {
   --main-color: #19c8fa;
   --transparent-color: rgb(15 116 143 / 70%);
+  --section-padding: 100px;
 }
 html {
   scroll-behavior: smooth;
@@ -43,6 +44,46 @@ a {
 }
 img {
   max-width: 100%;
+}
+
+.main-heading {
+  text-align: center;
+}
+.main-heading h2 {
+  position: relative;
+  font-weight: normal;
+  font-size: 40px;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background-color: #333;
+  bottom: -30px;
+}
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -38px;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.main-heading p {
+  width: 550px;
+  max-width: 100%;
+  margin: 0 auto 100px;
+  line-height: 1.7;
+  color: #777;
 }
 
 header {
@@ -214,4 +255,41 @@ section.hero .bullets li {
 section.hero .bullets li.active {
   background-color: var(--main-color);
   border-color: var(--main-color);
+}
+
+section.services {
+  margin-top: var(--section-padding);
+  margin-bottom: var(--section-padding);
+}
+@media (min-width: 768px) {
+  section.services .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+  }
+}
+section.services .service {
+  display: flex;
+}
+section.services .service i {
+  margin-right: 50px;
+}
+@media (max-width: 767px) {
+  section.services .service {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  section.services .service i {
+    margin: 0 0 30px 0;
+  }
+}
+section.services .service .service-info h3 {
+  margin-bottom: 30px;
+  color: var(--main-color);
+}
+section.services .service .service-info p {
+  line-height: 2;
+  color: #777;
 }
