@@ -5,13 +5,14 @@
 }
 :root {
   --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
 }
 html {
   scroll-behavior: smooth;
 }
 body {
   font-family: "Open Sans", sans-serif;
-  background: #000;
+  height: 5000px;
 }
 .container {
   padding-left: 15px;
@@ -127,4 +128,90 @@ header nav .form i {
   font-size: 20px;
   color: #fff;
   cursor: pointer;
+}
+
+section.hero {
+  position: relative;
+  min-height: 100vh;
+  background-color: #1f2021;
+  background-image: url(../images/landing.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+section.hero .slide-info {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  background-color: var(--transparent-color);
+}
+section.hero .slide-info .content {
+  max-width: 500px;
+}
+@media (max-width: 767px) {
+  section.hero .slide-info {
+    width: 100%;
+  }
+  section.hero .slide-info .content {
+    max-width: 100%;
+  }
+}
+section.hero .slide-info .content h2 {
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+section.hero .slide-info .content p {
+  font-size: 14px;
+  line-height: 2;
+}
+section.hero .change-background {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  section.hero .change-background {
+    display: none;
+  }
+}
+section.hero .angle-left {
+  left: 30px;
+}
+section.hero .angle-right {
+  right: 30px;
+}
+section.hero .bullets {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  bottom: 30px;
+}
+section.hero .bullets li {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+section.hero .bullets li.active {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
 }
