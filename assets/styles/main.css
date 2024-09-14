@@ -463,3 +463,20 @@ section.video .section-info a {
   color: #fff;
   background-color: #000;
 }
+
+section.about {
+  padding-top: var(--section-padding);
+  overflow: hidden;
+  text-align: center;
+}
+section.about img {
+  position: relative;
+  margin-top: -120px;
+  bottom: -100px;
+}
+@media (max-width: 767px) {
+  section.about img {
+    margin-top: -60px;
+    bottom: -60px;
+  }
+}
