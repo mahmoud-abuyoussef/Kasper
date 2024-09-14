@@ -846,3 +846,82 @@ section.subscribe p {
     margin: 30px 0 0;
   }
 }
+
+section.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+section.contact .content {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  section.contact .content {
+    flex-direction: column;
+  }
+}
+section.contact .content form {
+  flex-basis: 70%;
+  max-width: 100%;
+}
+section.contact .content form .main-input {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+section.contact .content form textarea.main-input {
+  max-width: 100%;
+  height: 200px;
+  max-height: 200px;
+}
+section.contact .content form input[type="submit"] {
+  display: flex;
+  padding: 20px;
+  margin-left: auto;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--main-color);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+section.contact .content .contact-info {
+  flex-basis: 25%;
+}
+@media (max-width: 767px) {
+  section.contact .content .contact-info {
+    order: -1;
+    text-align: center;
+  }
+}
+section.contact .content .contact-info h4 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+}
+section.contact .content .contact-info .phone {
+  display: block;
+  margin-bottom: 10px;
+  color: #777;
+}
+section.contact .content .contact-info h4:nth-of-type(2) {
+  margin-top: 90px;
+}
+@media (max-width: 767px) {
+  section.contact .content .contact-info h4:nth-of-type(2) {
+    margin-top: 30px;
+  }
+}
+section.contact .content .contact-info address {
+  line-height: 2;
+  color: #777;
+}
+@media (max-width: 767px) {
+  section.contact .content .contact-info address {
+    margin-bottom: 30px;
+  }
+}
