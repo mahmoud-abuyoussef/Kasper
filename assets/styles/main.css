@@ -13,7 +13,6 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
-  height: 5000px;
 }
 .container {
   padding-left: 15px;
@@ -177,7 +176,6 @@ section.hero {
   background-color: #1f2021;
   background-image: url(../images/landing.webp);
   background-size: cover;
-  background-repeat: no-repeat;
 }
 section.hero .overlay {
   position: absolute;
@@ -244,6 +242,7 @@ section.hero .bullets {
   transform: translateX(-50%);
   display: flex;
   bottom: 30px;
+  cursor: pointer;
 }
 section.hero .bullets li {
   width: 20px;
@@ -292,4 +291,64 @@ section.services .service .service-info h3 {
 section.services .service .service-info p {
   line-height: 2;
   color: #777;
+}
+
+section.design {
+  position: relative;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  height: 600px;
+  display: flex;
+  align-items: center;
+  background-image: url(../images/design-features.webp);
+  background-size: cover;
+  overflow: hidden;
+}
+section.design::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+section.design .image {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  section.design .image {
+    display: none;
+  }
+}
+section.design .image,
+section.design .section-info {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+section.design .image img {
+  position: relative;
+  bottom: -150px;
+}
+section.design .section-info {
+  padding: 50px;
+  color: #fff;
+  background-color: var(--transparent-color);
+}
+section.design .section-info h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+section.design .section-info ul li {
+  padding: 15px 0;
+}
+section.design .section-info ul li::before {
+  position: relative;
+  top: 1px;
+  content: "\f390";
+  margin-right: 20px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
 }
